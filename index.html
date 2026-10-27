@@ -1,845 +1,660 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>S & J ATELIER | Bespoke Handcrafted & Embroidered Luxury Apparel</title>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        atelier: {
-                            green: '#1B382B', // Signature Forest Green from packaging
-                            darkgreen: '#12251D',
-                            lightgreen: '#2A4D3D',
-                            cream: '#F7F4EE', // Signature Fabric Ivory/Cream
-                            sand: '#EFE9DE',
-                            gold: '#C5A059', // Foil Accent
-                            goldhover: '#B38E46',
-                            charcoal: '#222222',
-                            muted: '#6E6B65'
-                        }
-                    },
-                    fontFamily: {
-                        serif: ['"Cormorant Garamond"', 'serif'],
-                        sans: ['"Montserrat"', 'sans-serif'],
-                        display: ['"Playfair Display"', 'serif']
-                    }
-                }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>S & J ATELIER | Bespoke Luxury Streetwear & Custom Apparel</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              emerald: '#112920',
+              deepGreen: '#0a1a14',
+              cream: '#f9f6f0',
+              lightCream: '#fdfbf7',
+              gold: '#c5a059',
+              goldLight: '#e4ca8f',
+              dark: '#141414'
             }
+          },
+          fontFamily: {
+            serif: ['Cinzel', 'serif'],
+            playfair: ['Playfair Display', 'serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif']
+          }
         }
-    </script>
-    <style>
-        .gold-border {
-            border-color: #C5A059;
-        }
-        .gold-gradient-text {
-            background: linear-gradient(135deg, #ECC880 0%, #C5A059 50%, #9F7932 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .embroidery-preview-font-1 {
-            font-family: 'Playfair Display', serif;
-            letter-spacing: 2px;
-        }
-        .embroidery-preview-font-2 {
-            font-family: 'Montserrat', sans-serif;
-            text-transform: uppercase;
-            letter-spacing: 4px;
-            font-weight: 700;
-        }
-        .embroidery-preview-font-3 {
-            font-family: 'Cormorant Garamond', serif;
-            font-style: italic;
-            letter-spacing: 1px;
-        }
-        /* Custom scrollbar for luxury touch */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #F7F4EE;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #1B382B;
-            border-radius: 4px;
-        }
-    </style>
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #0d1f18;
+      color: #f9f6f0;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+    }
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #e4ca8f 0%, #c5a059 50%, #9e7b39 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .gold-border {
+      border-color: rgba(197, 160, 89, 0.35);
+    }
+    .gold-glow {
+      box-shadow: 0 0 25px rgba(197, 160, 89, 0.18);
+    }
+    .custom-scroll::-webkit-scrollbar {
+      width: 6px;
+    }
+    .custom-scroll::-webkit-scrollbar-thumb {
+      background: #c5a059;
+      border-radius: 4px;
+    }
+    /* Craft Texture Effects */
+    .craft-puff {
+      filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.65)) drop-shadow(0 -1px 2px rgba(255, 255, 255, 0.3));
+      transform: scale(1.02);
+    }
+    .craft-embroidery {
+      filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.8));
+      stroke: rgba(255,255,255,0.4);
+      stroke-width: 0.5px;
+    }
+    .craft-screen {
+      filter: drop-shadow(0 1px 2px rgba(0,0,0,0.4));
+      opacity: 0.95;
+    }
+  </style>
 </head>
-<body class="bg-atelier-cream text-atelier-charcoal font-sans antialiased selection:bg-atelier-gold selection:text-white">
+<body class="selection:bg-brand-gold selection:text-black">
 
-    <!-- Top Announcement Bar -->
-    <div class="bg-atelier-darkgreen text-atelier-sand text-xs tracking-widest uppercase py-2 px-4 text-center border-b border-atelier-lightgreen">
-        <span class="inline-block animate-pulse text-atelier-gold mr-2">✦</span>
-        Season One: Bespoke Custom Orders Open • Free Doorstep White-Glove Shipping Across India
-        <span class="inline-block animate-pulse text-atelier-gold ml-2">✦</span>
+  <!-- TOP ANNOUNCEMENT BAR -->
+  <div class="bg-brand-deepGreen text-brand-gold border-b border-brand-gold/20 py-2 text-center text-xs tracking-widest uppercase font-medium px-4">
+    Complimentary Bespoke Consultation & Worldwide Doorstep Shipping | S & J Atelier Signature 2026
+  </div>
+
+  <!-- NAVIGATION -->
+  <nav class="sticky top-0 z-50 bg-brand-emerald/90 backdrop-blur-md border-b border-brand-gold/20">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="#" class="flex items-center space-x-3">
+        <div class="w-10 h-10 border border-brand-gold rounded-full flex items-center justify-center text-brand-gold font-serif text-lg font-bold">SJ</div>
+        <div>
+          <span class="font-serif text-xl tracking-[0.25em] font-bold text-brand-cream block leading-tight">S & J ATELIER</span>
+          <span class="text-[9px] tracking-[0.3em] text-brand-gold uppercase block">Bespoke Couture</span>
+        </div>
+      </a>
+
+      <div class="hidden md:flex space-x-8 text-sm tracking-wider uppercase font-medium text-brand-cream/80">
+        <a href="#customizer" class="hover:text-brand-gold transition">Visual Studio</a>
+        <a href="#catalog" class="hover:text-brand-gold transition">Collection</a>
+        <a href="#unboxing" class="hover:text-brand-gold transition">The Packaging</a>
+        <a href="#appointment" class="hover:text-brand-gold transition">VIP Booking</a>
+        <a href="#contact" class="hover:text-brand-gold transition">Contact</a>
+      </div>
+
+      <a href="https://wa.me/918863075356?text=Hello%20S%26J%20Atelier,%20I%20want%20to%20discuss%20a%20bespoke%20order" target="_blank" class="bg-brand-gold text-brand-deepGreen font-semibold px-5 py-2.5 rounded-sm text-xs tracking-widest uppercase hover:bg-brand-goldLight transition flex items-center space-x-2">
+        <i class="fab fa-whatsapp text-sm"></i>
+        <span>Chat With Atelier</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="relative min-h-[85vh] flex items-center justify-center text-center px-4 overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(197,160,89,0.12)_0%,rgba(17,41,32,0.95)_75%)]"></div>
+    <div class="relative z-10 max-w-4xl mx-auto">
+      <span class="text-xs uppercase tracking-[0.4em] text-brand-gold mb-4 inline-block font-medium border border-brand-gold/30 px-4 py-1.5 rounded-full">
+        Haute Couture Streetwear • Crafted On Demand
+      </span>
+      <h1 class="font-serif text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-brand-cream leading-tight mb-6">
+        YOU IMAGINE.<br>
+        <span class="gold-gradient-text italic font-playfair font-normal">We Tailor The Masterpiece.</span>
+      </h1>
+      <p class="text-brand-cream/70 text-base sm:text-lg max-w-2xl mx-auto font-light leading-relaxed mb-8">
+        No mass inventory. Everything is handcrafted precisely for you—from heavyweight 380 GSM French Terry to 3D puff embroidery, multi-layer screen prints, and bespoke monograms.
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+        <a href="#customizer" class="w-full sm:w-auto bg-brand-gold text-brand-deepGreen px-8 py-4 font-bold tracking-widest text-xs uppercase hover:bg-brand-goldLight transition rounded-sm shadow-lg gold-glow">
+          Launch 2D Visual Studio
+        </a>
+        <a href="#catalog" class="w-full sm:w-auto border border-brand-gold text-brand-gold px-8 py-4 font-bold tracking-widest text-xs uppercase hover:bg-brand-gold/10 transition rounded-sm">
+          Explore Curated Pieces
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERACTIVE 2D VISUAL CUSTOMIZER -->
+  <section id="customizer" class="py-20 px-4 sm:px-6 bg-brand-deepGreen/80 border-y border-brand-gold/20">
+    <div class="max-w-7xl mx-auto">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="text-xs font-semibold tracking-[0.3em] uppercase text-brand-gold block mb-2">Live Visual Experience</span>
+        <h2 class="font-serif text-3xl sm:text-5xl font-bold text-brand-cream tracking-wide">Bespoke Design Studio</h2>
+        <p class="text-brand-cream/60 text-sm mt-3">Select your base garment, choose your color, place your artwork or upload your own, and watch it render in real time before placing your custom order.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+        
+        <!-- LEFT: VISUAL CANVAS MOCKUP (5 Cols) -->
+        <div class="lg:col-span-5 sticky top-28 bg-brand-emerald border border-brand-gold/30 rounded-lg p-6 flex flex-col items-center gold-glow">
+          
+          <!-- View Switcher (Front/Back) -->
+          <div class="flex space-x-3 mb-6 bg-brand-deepGreen p-1.5 rounded-full border border-brand-gold/30">
+            <button id="btnViewFront" onclick="setView('front')" class="px-5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-gold text-brand-deepGreen transition">
+              Front View
+            </button>
+            <button id="btnViewBack" onclick="setView('back')" class="px-5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider text-brand-cream/70 hover:text-brand-gold transition">
+              Back View
+            </button>
+          </div>
+
+          <!-- The Real-time Dynamic SVG Canvas -->
+          <div class="relative w-72 h-80 sm:w-80 sm:h-96 flex items-center justify-center transition-all duration-300">
+            
+            <!-- SVG Garment Base Layer -->
+            <svg id="garmentSvg" class="w-full h-full filter drop-shadow-2xl transition-colors duration-300" viewBox="0 0 300 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Default Hoodie SVG Path -->
+              <path id="garmentBody" d="M90 40 L120 70 L180 70 L210 40 L280 85 L245 155 L215 140 L215 300 L85 300 L85 140 L55 155 L20 85 Z" fill="#112920" stroke="#050a08" stroke-width="4"/>
+              <!-- Collar/Hoodie Inner -->
+              <path id="garmentCollar" d="M120 70 Q150 110 180 70 Q150 45 120 70 Z" fill="#0b1c15" opacity="0.6"/>
+              <!-- Front Pocket / Details -->
+              <path id="hoodiePocket" d="M100 210 L200 210 L190 270 L110 270 Z" fill="#0d2119" stroke="#050a08" stroke-width="2" opacity="0.8"/>
+            </svg>
+
+            <!-- Artwork / Print Overlay -->
+            <div id="artworkContainer" class="absolute pointer-events-none flex flex-col items-center justify-center transition-all duration-300 craft-puff" style="top: 36%; left: 50%; transform: translate(-50%, -50%);">
+              <div id="artworkVisual" class="text-4xl text-brand-gold drop-shadow-lg">
+                <i class="fas fa-paw"></i>
+              </div>
+              <span id="artworkText" class="mt-2 text-[10px] uppercase font-bold tracking-widest text-brand-cream/90 block font-serif">
+                S&J ROYAL
+              </span>
+            </div>
+          </div>
+
+          <!-- Status bar below preview -->
+          <div class="w-full mt-6 pt-4 border-t border-brand-gold/20 flex justify-between items-center text-xs text-brand-cream/80">
+            <div>
+              <span class="text-brand-gold font-semibold uppercase text-[10px] block">Current Model</span>
+              <span id="labelGarment">Oversized Hoodie</span> (<span id="labelView">Front</span>)
+            </div>
+            <div class="text-right">
+              <span class="text-brand-gold font-semibold uppercase text-[10px] block">Estimated Base</span>
+              <span id="labelPrice" class="text-base font-bold text-brand-gold">₹2,499</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: SELECTION CONTROLS (7 Cols) -->
+        <div class="lg:col-span-7 bg-brand-emerald/40 border border-brand-gold/20 rounded-lg p-6 sm:p-8 space-y-8">
+          
+          <!-- 1. Garment Selector -->
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-widest text-brand-gold mb-3">1. Select Garment Pattern</label>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+              <button onclick="setGarment('hoodie', 2499, 'Oversized Hoodie')" class="garment-btn active border-2 border-brand-gold bg-brand-emerald text-brand-cream text-xs py-3 px-3 rounded font-medium text-center hover:border-brand-gold transition">
+                <i class="fas fa-tshirt block text-lg mb-1 text-brand-gold"></i>
+                Hoodie (380 GSM)
+              </button>
+              <button onclick="setGarment('tee', 1499, 'Round Neck Tee')" class="garment-btn border border-brand-gold/30 bg-brand-deepGreen text-brand-cream/80 text-xs py-3 px-3 rounded font-medium text-center hover:border-brand-gold transition">
+                <i class="fas fa-vest block text-lg mb-1 text-brand-gold"></i>
+                Round Neck Tee
+              </button>
+              <button onclick="setGarment('jacket', 3999, 'Street Jacket')" class="garment-btn border border-brand-gold/30 bg-brand-deepGreen text-brand-cream/80 text-xs py-3 px-3 rounded font-medium text-center hover:border-brand-gold transition">
+                <i class="fas fa-user-ninja block text-lg mb-1 text-brand-gold"></i>
+                Street Jacket
+              </button>
+              <button onclick="setGarment('shirt', 1999, 'Relaxed Fit Shirt')" class="garment-btn border border-brand-gold/30 bg-brand-deepGreen text-brand-cream/80 text-xs py-3 px-3 rounded font-medium text-center hover:border-brand-gold transition">
+                <i class="fas fa-shirt block text-lg mb-1 text-brand-gold"></i>
+                Relaxed Shirt
+              </button>
+            </div>
+          </div>
+
+          <!-- 2. Eight Premium Base Colors -->
+          <div>
+            <div class="flex justify-between items-center mb-3">
+              <label class="text-xs font-bold uppercase tracking-widest text-brand-gold">2. Atelier Color Palette</label>
+              <span id="currentColorName" class="text-xs text-brand-cream/70 font-serif">Emerald Green (#112920)</span>
+            </div>
+            <div class="flex flex-wrap gap-3">
+              <button onclick="setColor('#112920', 'Emerald Green')" title="Emerald Green" class="w-9 h-9 rounded-full border-2 border-brand-gold shadow-md hover:scale-110 transition bg-[#112920]"></button>
+              <button onclick="setColor('#0a0a0a', 'Jet Black')" title="Jet Black" class="w-9 h-9 rounded-full border border-white/20 shadow-md hover:scale-110 transition bg-[#0a0a0a]"></button>
+              <button onclick="setColor('#f5f2e9', 'Vintage Cream')" title="Vintage Cream" class="w-9 h-9 rounded-full border border-white/20 shadow-md hover:scale-110 transition bg-[#f5f2e9]"></button>
+              <button onclick="setColor('#7f1d1d', 'Crimson Red')" title="Crimson Red" class="w-9 h-9 rounded-full border border-white/20 shadow-md hover:scale-110 transition bg-[#7f1d1d]"></button>
+              <button onclick="setColor('#1e293b', 'Royal Navy')" title="Royal Navy" class="w-9 h-9 rounded-full border border-white/20 shadow-md hover:scale-110 transition bg-[#1e293b]"></button>
+              <button onclick="setColor('#473b4f', 'Muted Lavender')" title="Muted Lavender" class="w-9 h-9 rounded-full border border-white/20 shadow-md hover:scale-110 transition bg-[#473b4f]"></button>
+              <button onclick="setColor('#3d2b1f', 'Earthy Brown')" title="Earthy Brown" class="w-9 h-9 rounded-full border border-white/20 shadow-md hover:scale-110 transition bg-[#3d2b1f]"></button>
+              <button onclick="setColor('#ffffff', 'Pure White')" title="Pure White" class="w-9 h-9 rounded-full border border-white/20 shadow-md hover:scale-110 transition bg-[#ffffff]"></button>
+            </div>
+          </div>
+
+          <!-- 3. Artwork Library & Custom Upload -->
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-widest text-brand-gold mb-3">3. Choose Artwork or Upload Own</label>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-4">
+              
+              <!-- Animal Print -->
+              <button onclick="setArtwork('tiger', 'animal')" class="art-btn border-2 border-brand-gold bg-brand-deepGreen p-3 rounded text-left hover:border-brand-gold transition">
+                <span class="text-xl block mb-1 text-brand-gold">🐅</span>
+                <span class="text-xs font-semibold block text-brand-cream">Bengal Tiger</span>
+                <span class="text-[10px] text-brand-cream/50">Fierce Animalia</span>
+              </button>
+
+              <!-- Spiritual / Divine -->
+              <button onclick="setArtwork('shiva', 'spiritual')" class="art-btn border border-brand-gold/30 bg-brand-deepGreen p-3 rounded text-left hover:border-brand-gold transition">
+                <span class="text-xl block mb-1 text-brand-gold">🔱</span>
+                <span class="text-xs font-semibold block text-brand-cream">Trishul Aura</span>
+                <span class="text-[10px] text-brand-cream/50">Divine Heritage</span>
+              </button>
+
+              <!-- Love & Minimal -->
+              <button onclick="setArtwork('heart', 'love')" class="art-btn border border-brand-gold/30 bg-brand-deepGreen p-3 rounded text-left hover:border-brand-gold transition">
+                <span class="text-xl block mb-1 text-brand-gold">🖤</span>
+                <span class="text-xs font-semibold block text-brand-cream">Minimal Heart</span>
+                <span class="text-[10px] text-brand-cream/50">Aesthetic Love</span>
+              </button>
+
+              <!-- Gothic Quote -->
+              <button onclick="setArtwork('quote', 'quote')" class="art-btn border border-brand-gold/30 bg-brand-deepGreen p-3 rounded text-left hover:border-brand-gold transition">
+                <span class="text-xl block mb-1 text-brand-gold">𝕬</span>
+                <span class="text-xs font-semibold block text-brand-cream">Gothic Verse</span>
+                <span class="text-[10px] text-brand-cream/50">Atelier Quote</span>
+              </button>
+            </div>
+
+            <!-- Upload Custom File -->
+            <div class="p-4 border border-dashed border-brand-gold/40 rounded bg-brand-deepGreen/50 flex flex-col sm:flex-row items-center justify-between gap-3">
+              <div class="text-xs text-brand-cream/70 text-center sm:text-left">
+                <span class="font-bold text-brand-gold block">Have your own artwork, deity or logo?</span>
+                PNG, JPG or SVG from phone gallery.
+              </div>
+              <label class="bg-brand-emerald border border-brand-gold text-brand-gold text-xs font-bold uppercase tracking-wider px-4 py-2 rounded cursor-pointer hover:bg-brand-gold hover:text-black transition">
+                <span>Upload Design</span>
+                <input type="file" id="imageUploader" accept="image/*" class="hidden" onchange="handleImageUpload(event)">
+              </label>
+            </div>
+          </div>
+
+          <!-- 4. Craft Technique (Embroidery / Puff / Screen) -->
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-widest text-brand-gold mb-3">4. Craft & Texture Technique</label>
+            <div class="grid grid-cols-3 gap-3">
+              <button onclick="setCraft('puff', 350, '3D Puff Print')" class="craft-btn active border-2 border-brand-gold bg-brand-emerald text-brand-cream text-xs py-2.5 px-3 rounded font-medium text-center">
+                3D Puff Print (+₹350)
+              </button>
+              <button onclick="setCraft('embroidery', 500, 'Needlework Embroidery')" class="craft-btn border border-brand-gold/30 bg-brand-deepGreen text-brand-cream/70 text-xs py-2.5 px-3 rounded font-medium text-center">
+                Embroidery (+₹500)
+              </button>
+              <button onclick="setCraft('screen', 200, 'High-Density Screen')" class="craft-btn border border-brand-gold/30 bg-brand-deepGreen text-brand-cream/70 text-xs py-2.5 px-3 rounded font-medium text-center">
+                HD Silk Screen (+₹200)
+              </button>
+            </div>
+          </div>
+
+          <!-- 5. Placement & Custom Text -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-widest text-brand-gold mb-2">5. Placement</label>
+              <select id="placementSelect" onchange="updatePlacement()" class="w-full bg-brand-deepGreen border border-brand-gold/40 rounded p-2.5 text-xs text-brand-cream focus:outline-none">
+                <option value="chest">Center Chest (Statement)</option>
+                <option value="pocket">Left Pocket / Crest</option>
+                <option value="back">Upper Back (Oversized)</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-widest text-brand-gold mb-2">Custom Text / Monogram</label>
+              <input type="text" id="customTextInput" oninput="updateCustomText(this.value)" placeholder="e.g. S & J / YOUR NAME" class="w-full bg-brand-deepGreen border border-brand-gold/40 rounded p-2.5 text-xs text-brand-cream placeholder-brand-cream/30 focus:outline-none">
+            </div>
+          </div>
+
+          <!-- SUBMIT / WHATSAPP ORDER BUTTON -->
+          <div class="pt-4 border-t border-brand-gold/30">
+            <button onclick="orderViaWhatsApp()" class="w-full bg-brand-gold text-brand-deepGreen font-serif font-bold text-sm tracking-widest uppercase py-4 rounded hover:bg-brand-goldLight transition flex items-center justify-center space-x-3 shadow-xl gold-glow">
+              <i class="fab fa-whatsapp text-lg"></i>
+              <span>Order This Custom Piece (Send Spec Sheet)</span>
+            </button>
+            <p class="text-center text-[11px] text-brand-cream/50 mt-2">
+              Instant quote will be routed to Master Artisan at <strong>+91 8863075356</strong>.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- UNBOXING & PACKAGING SHOWCASE -->
+  <section id="unboxing" class="py-20 px-6 max-w-7xl mx-auto">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="text-xs uppercase tracking-[0.3em] text-brand-gold block mb-2">The Unboxing Ritual</span>
+      <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-cream">Crafted Down To The Final Wrap</h2>
+      <p class="text-brand-cream/60 text-sm mt-3">Every bespoke piece is housed in our signature Forest Emerald rigid box, sealed with gold-stamped tissue and personalized artisan notes.</p>
     </div>
 
-    <!-- Main Navigation Bar -->
-    <header class="sticky top-0 z-40 bg-atelier-cream/90 backdrop-blur-md border-b border-atelier-sand transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <!-- Brand Logo -->
-            <a href="#" class="flex items-center space-x-3 group">
-                <div class="w-10 h-10 rounded-full bg-atelier-green border border-atelier-gold flex items-center justify-center text-atelier-gold font-serif text-lg font-bold shadow-sm transition-transform group-hover:scale-105">
-                    SJ
-                </div>
-                <div class="flex flex-col">
-                    <span class="font-serif text-2xl font-bold tracking-wider text-atelier-green leading-none">S & J ATELIER</span>
-                    <span class="text-[9px] tracking-[0.28em] uppercase text-atelier-muted font-medium mt-1">Est. 2026 • Premium Basics</span>
-                </div>
-            </a>
-
-            <!-- Nav Links (Desktop) -->
-            <nav class="hidden md:flex items-center space-x-8 text-xs uppercase tracking-widest font-semibold text-atelier-charcoal">
-                <a href="#customizer" class="text-atelier-gold hover:text-atelier-goldhover transition">Customizer Studio</a>
-                <a href="#collections" class="hover:text-atelier-green transition">Collections</a>
-                <a href="#craft" class="hover:text-atelier-green transition">Craftsmanship</a>
-                <a href="#packaging" class="hover:text-atelier-green transition">Unboxing Experience</a>
-                <a href="#suggestions" class="hover:text-atelier-green transition">Bespoke Suggestions</a>
-            </nav>
-
-            <!-- Actions: Cart & WhatsApp -->
-            <div class="flex items-center space-x-4">
-                <a href="#customizer" class="hidden sm:inline-flex items-center px-4 py-2 border border-atelier-green text-atelier-green text-xs font-semibold uppercase tracking-wider rounded-md hover:bg-atelier-green hover:text-atelier-cream transition duration-200">
-                    Design Your Piece
-                </a>
-                <button onclick="toggleCartModal()" class="relative p-2 text-atelier-green hover:text-atelier-gold transition" title="Shopping Bag">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
-                    </svg>
-                    <span id="cart-counter" class="absolute top-1 right-1 bg-atelier-gold text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">0</span>
-                </button>
-            </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-brand-deepGreen border border-brand-gold/30 rounded p-6 text-center hover:border-brand-gold transition">
+        <div class="w-12 h-12 mx-auto rounded-full border border-brand-gold/40 flex items-center justify-center text-brand-gold text-xl mb-4">
+          <i class="fas fa-box-open"></i>
         </div>
-    </header>
+        <h3 class="font-serif text-lg font-bold text-brand-cream mb-2">Rigid Emerald Keepsake Box</h3>
+        <p class="text-xs text-brand-cream/60 leading-relaxed">Debossed with our gold foil hallmark, built to protect and preserve your bespoke streetwear indefinitely.</p>
+      </div>
 
-    <!-- Hero Section -->
-    <section class="relative bg-atelier-green text-atelier-cream py-20 lg:py-28 overflow-hidden">
-        <!-- Subtle Gold Decorative Rings -->
-        <div class="absolute -top-32 -right-32 w-96 h-96 rounded-full border border-atelier-lightgreen/40 pointer-events-none"></div>
-        <div class="absolute -bottom-32 -left-32 w-96 h-96 rounded-full border border-atelier-gold/20 pointer-events-none"></div>
-
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                <div class="lg:col-span-7 space-y-6">
-                    <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-atelier-lightgreen/60 border border-atelier-gold/30 text-atelier-gold text-xs tracking-widest uppercase">
-                        <span>Pure Combed Cotton & Heavyweight Blends</span>
-                    </div>
-                    <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl leading-tight font-medium">
-                        We Don't Just Sell Clothes.<br>
-                        <span class="gold-gradient-text italic font-normal">We Craft Your Identity.</span>
-                    </h1>
-                    <p class="text-atelier-sand/80 text-sm sm:text-base max-w-xl font-light leading-relaxed">
-                        Say goodbye to mass-produced fashion. At S & J ATELIER, every piece—from heavyweight tees and winter hoodies to handcrafted denim jackets—is created on-demand according to your exact fit, color, multi-layer print, and hand-embroidery preferences.
-                    </p>
-                    <div class="flex flex-col sm:flex-row gap-4 pt-4">
-                        <a href="#customizer" class="px-8 py-4 bg-atelier-gold text-atelier-darkgreen text-xs font-bold tracking-widest uppercase rounded-sm shadow-lg hover:bg-atelier-goldhover transition text-center">
-                            Launch Customizer Studio
-                        </a>
-                        <a href="https://wa.me/?text=Hello%20S%26J%20Atelier,%20I%20want%20to%20discuss%20a%20custom%20clothing%20order" target="_blank" class="px-8 py-4 border border-atelier-sand/30 hover:border-atelier-gold text-atelier-sand text-xs font-semibold tracking-widest uppercase rounded-sm transition text-center flex items-center justify-center space-x-2">
-                            <span>Chat on WhatsApp</span>
-                        </a>
-                    </div>
-                    <div class="grid grid-cols-3 gap-6 pt-6 border-t border-atelier-lightgreen/50 text-center sm:text-left">
-                        <div>
-                            <p class="font-serif text-2xl text-atelier-gold">100%</p>
-                            <p class="text-[11px] text-atelier-sand/70 uppercase tracking-wider mt-1">Made-to-Order</p>
-                        </div>
-                        <div>
-                            <p class="font-serif text-2xl text-atelier-gold">320+ GSM</p>
-                            <p class="text-[11px] text-atelier-sand/70 uppercase tracking-wider mt-1">Heavy French Terry</p>
-                        </div>
-                        <div>
-                            <p class="font-serif text-2xl text-atelier-gold">Bespoke</p>
-                            <p class="text-[11px] text-atelier-sand/70 uppercase tracking-wider mt-1">Multi-Layer Craft</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Hero Visual: Signature Emerald Box Look -->
-                <div class="lg:col-span-5 relative">
-                    <div class="relative mx-auto max-w-sm rounded-lg overflow-hidden shadow-2xl border border-atelier-gold/40 bg-atelier-lightgreen/40 p-3">
-                        <div class="bg-atelier-darkgreen rounded-md p-6 text-center border border-atelier-gold/20 space-y-4">
-                            <div class="w-16 h-16 mx-auto rounded-full bg-atelier-green border-2 border-atelier-gold flex items-center justify-center text-atelier-gold font-serif text-2xl font-bold shadow-inner">
-                                SJ
-                            </div>
-                            <h3 class="font-serif text-2xl text-atelier-sand font-bold tracking-wider">S & J ATELIER</h3>
-                            <p class="text-xs text-atelier-gold tracking-widest uppercase">Est. 2026 • Premium Basics</p>
-                            <div class="h-px w-24 mx-auto bg-atelier-gold/40"></div>
-                            <p class="text-xs text-atelier-sand/70 italic">
-                                "Hand-inspected, wrapped in signature tissue, wax-sealed, and shipped in our bespoke rigid forest box."
-                            </p>
-                            <div class="pt-2">
-                                <span class="inline-block bg-atelier-green/90 text-atelier-gold text-[11px] px-3 py-1 rounded border border-atelier-gold/30 uppercase tracking-wider">
-                                    Direct Atelier Pricing
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="bg-brand-deepGreen border border-brand-gold/30 rounded p-6 text-center hover:border-brand-gold transition">
+        <div class="w-12 h-12 mx-auto rounded-full border border-brand-gold/40 flex items-center justify-center text-brand-gold text-xl mb-4">
+          <i class="fas fa-scroll"></i>
         </div>
-    </section>
+        <h3 class="font-serif text-lg font-bold text-brand-cream mb-2">Tissue & Artisan Certificate</h3>
+        <p class="text-xs text-brand-cream/60 leading-relaxed">Hand-wrapped in monogrammed paper with a gold-bordered Thank You card and fabric authenticity certificate.</p>
+      </div>
 
-    <!-- LIVE INTERACTIVE BESPOKE CUSTOMIZER STUDIO (The Core Feature) -->
-    <section id="customizer" class="py-20 bg-atelier-sand/50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
-                <span class="text-xs uppercase tracking-[0.25em] text-atelier-gold font-bold">Online Trial & Visualizer</span>
-                <h2 class="font-serif text-3xl sm:text-4xl text-atelier-green font-bold">Live Atelier Customizer</h2>
-                <p class="text-sm text-atelier-muted">
-                    Pick your silhouette, select your luxury fabric color, choose handcrafted embroidery or multi-layer printing, and preview your custom text live before placing an order.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-                
-                <!-- Live Visual Preview Canvas Mockup (Left Side) -->
-                <div class="lg:col-span-7 bg-white rounded-xl shadow-lg border border-atelier-sand p-6 sm:p-8 flex flex-col items-center justify-center relative min-h-[500px]">
-                    <div class="absolute top-4 left-4 bg-atelier-cream border border-atelier-sand px-3 py-1 rounded text-[11px] font-semibold text-atelier-green uppercase tracking-wider">
-                        Live Simulation Preview
-                    </div>
-                    <div id="preview-tag-badge" class="absolute top-4 right-4 bg-atelier-green text-atelier-gold px-3 py-1 rounded text-[11px] font-mono tracking-widest">
-                        ESTIMATED: ₹<span id="preview-price">1,899</span>
-                    </div>
-
-                    <!-- Garment Visual Container -->
-                    <div class="relative w-72 sm:w-80 h-96 flex items-center justify-center mt-6 transition-all duration-300">
-                        <!-- Garment Silhouette (SVG Rendered) -->
-                        <div id="garment-color-wrapper" class="w-full h-full rounded-2xl flex items-center justify-center transition-colors duration-500 relative shadow-inner overflow-hidden" style="background-color: #1B382B;">
-                            <!-- Fabric Texture Subtle Overlay -->
-                            <div class="absolute inset-0 opacity-20 pointer-events-none mix-blend-overlay bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
-
-                            <!-- Silhouette Graphic -->
-                            <svg id="garment-silhouette-svg" class="w-64 h-64 text-white/30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
-                                <!-- T-shirt default path -->
-                                <path d="M4 6l3-3h10l3 3 2 4-4 2-1-2v11H7V10L6 12 2 10l2-4z" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-
-                            <!-- Live Embroidered / Printed Content Display Overlay -->
-                            <div id="custom-design-stage" class="absolute flex flex-col items-center justify-center text-center px-4 transition-all duration-300">
-                                <span id="visual-custom-text" class="embroidery-preview-font-2 text-atelier-gold text-lg sm:text-xl drop-shadow-md select-none">
-                                    S & J ATELIER
-                                </span>
-                                <span id="visual-custom-subtext" class="text-[9px] tracking-[0.2em] uppercase text-white/80 font-mono mt-1">
-                                    Bespoke • 01/01
-                                </span>
-                                <div id="visual-technique-pill" class="mt-2 text-[9px] uppercase px-2 py-0.5 rounded border border-atelier-gold/40 text-atelier-gold bg-black/30">
-                                    Hand Embroidery
-                                </div>
-                            </div>
-
-                            <!-- Inner Collar Tag Simulation -->
-                            <div class="absolute top-3 w-14 h-7 bg-[#F7F4EE] border border-[#C5A059] rounded-sm flex flex-col items-center justify-center shadow-sm">
-                                <span class="font-serif text-[8px] font-bold text-atelier-green leading-none">SJ</span>
-                                <span class="text-[5px] text-gray-500 uppercase">100% Cotton</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Visual specs footer -->
-                    <div class="mt-6 w-full grid grid-cols-3 gap-2 text-center text-xs border-t border-atelier-sand pt-4 text-atelier-muted">
-                        <div>Silhouette: <strong id="spec-apparel" class="text-atelier-charcoal block mt-0.5">Oversized T-Shirt</strong></div>
-                        <div>Color: <strong id="spec-color" class="text-atelier-charcoal block mt-0.5">Emerald Green</strong></div>
-                        <div>Craft: <strong id="spec-craft" class="text-atelier-charcoal block mt-0.5">Hand Embroidery</strong></div>
-                    </div>
-                </div>
-
-                <!-- Customizer Control Controls (Right Side) -->
-                <div class="lg:col-span-5 bg-white rounded-xl shadow-lg border border-atelier-sand p-6 sm:p-8 space-y-6">
-                    <div>
-                        <h3 class="font-serif text-2xl font-bold text-atelier-green">Configure Your Piece</h3>
-                        <p class="text-xs text-atelier-muted mt-1">Select specifications. Every garment is made individually by our artisans.</p>
-                    </div>
-
-                    <!-- 1. Garment Type -->
-                    <div class="space-y-2">
-                        <label class="text-xs uppercase font-bold tracking-wider text-atelier-charcoal">1. Select Garment</label>
-                        <div class="grid grid-cols-2 gap-2">
-                            <button onclick="updateGarment('tshirt', 'Heavy Oversized T-Shirt', 1899)" class="garment-btn active-opt p-2.5 border rounded text-xs font-medium text-left border-atelier-gold bg-atelier-cream text-atelier-green">
-                                👕 Oversized Tee <span class="block text-[10px] text-atelier-muted">260 GSM Combed</span>
-                            </button>
-                            <button onclick="updateGarment('hoodie', 'Winter Heavyweight Hoodie', 3499)" class="garment-btn p-2.5 border rounded text-xs font-medium text-left border-atelier-sand hover:border-atelier-gold text-atelier-charcoal">
-                                🧥 Heavy Hoodie <span class="block text-[10px] text-atelier-muted">400 GSM Fleece</span>
-                            </button>
-                            <button onclick="updateGarment('sweatshirt', 'Minimal Crewneck Sweatshirt', 2799)" class="garment-btn p-2.5 border rounded text-xs font-medium text-left border-atelier-sand hover:border-atelier-gold text-atelier-charcoal">
-                                🧶 Crewneck Sweatshirt <span class="block text-[10px] text-atelier-muted">340 GSM French Terry</span>
-                            </button>
-                            <button onclick="updateGarment('jacket', 'Custom Raw Denim Jacket', 4899)" class="garment-btn p-2.5 border rounded text-xs font-medium text-left border-atelier-sand hover:border-atelier-gold text-atelier-charcoal">
-                                🧥 Denim Jacket <span class="block text-[10px] text-atelier-muted">14.5 Oz Japanese Denim</span>
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- 2. Fabric Shade -->
-                    <div class="space-y-2">
-                        <label class="text-xs uppercase font-bold tracking-wider text-atelier-charcoal">2. Fabric Color</label>
-                        <div class="flex items-center space-x-3">
-                            <button onclick="updateColor('#1B382B', 'Signature Forest Green', '#C5A059')" class="w-8 h-8 rounded-full border-2 border-atelier-gold shadow-sm bg-[#1B382B]" title="Forest Green"></button>
-                            <button onclick="updateColor('#F7F4EE', 'Warm Ivory Cream', '#1B382B')" class="w-8 h-8 rounded-full border border-gray-300 shadow-sm bg-[#F7F4EE]" title="Ivory Cream"></button>
-                            <button onclick="updateColor('#111111', 'Obsidian Jet Black', '#C5A059')" class="w-8 h-8 rounded-full border border-gray-300 shadow-sm bg-[#111111]" title="Obsidian Black"></button>
-                            <button onclick="updateColor('#4A3728', 'Vintage Espresso Mocha', '#ECC880')" class="w-8 h-8 rounded-full border border-gray-300 shadow-sm bg-[#4A3728]" title="Espresso Brown"></button>
-                        </div>
-                    </div>
-
-                    <!-- 3. Crafting Technique -->
-                    <div class="space-y-2">
-                        <label class="text-xs uppercase font-bold tracking-wider text-atelier-charcoal">3. Crafting Technique</label>
-                        <select id="select-craft" onchange="updateCraft(this.value)" class="w-full text-xs p-3 border border-atelier-sand rounded bg-white text-atelier-charcoal focus:outline-none focus:border-atelier-gold">
-                            <option value="Hand-Guided Embroidery">🧵 Fine Hand-Guided Needlework / Embroidery</option>
-                            <option value="Multi-Layer Textured Print">🎨 Multi-Layer High-Density Screen Print</option>
-                            <option value="Bespoke Hand Painting">🖌️ Bespoke Hand-Painted Textile Art (1 of 1)</option>
-                        </select>
-                    </div>
-
-                    <!-- 4. Custom Lettering / Initial / Name -->
-                    <div class="space-y-2">
-                        <label class="text-xs uppercase font-bold tracking-wider text-atelier-charcoal">4. Custom Text / Name / Monogram</label>
-                        <input id="input-custom-text" type="text" maxlength="24" value="S & J ATELIER" oninput="renderCustomText(this.value)" placeholder="Your Name or Initials" class="w-full text-xs p-3 border border-atelier-sand rounded bg-white text-atelier-charcoal focus:outline-none focus:border-atelier-gold">
-                        <div class="flex space-x-2 pt-1">
-                            <button onclick="setFontStyle('font-1')" class="text-[11px] px-2.5 py-1 border border-atelier-sand rounded hover:border-atelier-gold font-serif">Serif Royal</button>
-                            <button onclick="setFontStyle('font-2')" class="text-[11px] px-2.5 py-1 border border-atelier-sand rounded hover:border-atelier-gold font-sans font-bold uppercase">Modern Bold</button>
-                            <button onclick="setFontStyle('font-3')" class="text-[11px] px-2.5 py-1 border border-atelier-sand rounded hover:border-atelier-gold font-serif italic">Script Elegance</button>
-                        </div>
-                    </div>
-
-                    <!-- 5. Placement & Sizing -->
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="space-y-1">
-                            <label class="text-[11px] uppercase font-bold tracking-wider text-atelier-charcoal">Placement</label>
-                            <select id="select-placement" class="w-full text-xs p-2.5 border border-atelier-sand rounded bg-white">
-                                <option>Center Chest</option>
-                                <option>Left Minimal Pocket Area</option>
-                                <option>Oversized Back Panel</option>
-                            </select>
-                        </div>
-                        <div class="space-y-1">
-                            <label class="text-[11px] uppercase font-bold tracking-wider text-atelier-charcoal">Size (Unisex Fit)</label>
-                            <select id="select-size" class="w-full text-xs p-2.5 border border-atelier-sand rounded bg-white font-medium">
-                                <option>Small (S - Relaxed)</option>
-                                <option selected>Medium (M - Oversized)</option>
-                                <option>Large (L - Boxy)</option>
-                                <option>Extra Large (XL - Drape)</option>
-                                <option>Custom Measurement (Tailored)</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <!-- Order Action Buttons -->
-                    <div class="pt-4 space-y-3">
-                        <button onclick="sendOrderViaWhatsApp()" class="w-full py-3.5 bg-atelier-green text-atelier-cream text-xs font-bold uppercase tracking-widest rounded shadow hover:bg-atelier-darkgreen transition flex items-center justify-center space-x-2">
-                            <span>📲 Finalize & Send Order to WhatsApp</span>
-                        </button>
-                        <button onclick="addToBagFromCustomizer()" class="w-full py-3 border border-atelier-gold text-atelier-charcoal hover:bg-atelier-gold hover:text-white text-xs font-semibold uppercase tracking-wider rounded transition">
-                            Add to Bag for Checkout
-                        </button>
-                    </div>
-                </div>
-
-            </div>
+      <div class="bg-brand-deepGreen border border-brand-gold/30 rounded p-6 text-center hover:border-brand-gold transition">
+        <div class="w-12 h-12 mx-auto rounded-full border border-brand-gold/40 flex items-center justify-center text-brand-gold text-xl mb-4">
+          <i class="fas fa-truck-fast"></i>
         </div>
-    </section>
-
-    <!-- SEASON 1 SIGNATURE DROP / SAMPLES -->
-    <section id="collections" class="py-20 bg-atelier-cream">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
-                <div>
-                    <span class="text-xs uppercase tracking-[0.25em] text-atelier-gold font-bold">Inspiration & Base Prototypes</span>
-                    <h2 class="font-serif text-3xl sm:text-4xl text-atelier-green font-bold mt-1">Season 1: Atelier Essentials</h2>
-                </div>
-                <p class="text-xs text-atelier-muted max-w-sm mt-3 md:mt-0">
-                    Each design below serves as a base canvas. When you order, tell us your preferred embroidery, text, or artwork adaptations.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Item 1 -->
-                <div class="bg-white rounded-lg overflow-hidden border border-atelier-sand shadow-sm hover:shadow-md transition group">
-                    <div class="h-64 bg-atelier-green/10 flex items-center justify-center p-6 relative">
-                        <div class="w-36 h-44 rounded-lg bg-atelier-green flex items-center justify-center text-atelier-gold font-serif text-xl border border-atelier-gold/40 shadow-inner group-hover:scale-105 transition-transform">
-                            SJ Green
-                        </div>
-                        <span class="absolute top-3 left-3 bg-white text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded text-atelier-green border">320 GSM</span>
-                    </div>
-                    <div class="p-5 space-y-2">
-                        <p class="text-xs text-atelier-gold font-semibold uppercase tracking-wider">Heavyweight Crewneck</p>
-                        <h4 class="font-serif text-lg font-bold text-atelier-charcoal">Forest Signature Sweatshirt</h4>
-                        <p class="text-xs text-atelier-muted">Custom gold-thread chest embroidery with brushed luxury inner fleece.</p>
-                        <div class="pt-2 flex items-center justify-between">
-                            <span class="font-semibold text-sm">₹2,799</span>
-                            <button onclick="quickOrder('Forest Signature Sweatshirt', 2799)" class="text-xs font-bold text-atelier-green uppercase tracking-wider hover:text-atelier-gold">Customize →</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Item 2 -->
-                <div class="bg-white rounded-lg overflow-hidden border border-atelier-sand shadow-sm hover:shadow-md transition group">
-                    <div class="h-64 bg-atelier-sand/30 flex items-center justify-center p-6 relative">
-                        <div class="w-36 h-44 rounded-lg bg-atelier-cream flex items-center justify-center text-atelier-green font-serif text-xl border border-atelier-gold/30 shadow-inner group-hover:scale-105 transition-transform">
-                            Ivory Tee
-                        </div>
-                        <span class="absolute top-3 left-3 bg-white text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded text-atelier-green border">260 GSM</span>
-                    </div>
-                    <div class="p-5 space-y-2">
-                        <p class="text-xs text-atelier-gold font-semibold uppercase tracking-wider">Oversized T-Shirt</p>
-                        <h4 class="font-serif text-lg font-bold text-atelier-charcoal">Warm Cream Bespoke Tee</h4>
-                        <p class="text-xs text-atelier-muted">High-density multi-layer typography or monogram on collar tag & back.</p>
-                        <div class="pt-2 flex items-center justify-between">
-                            <span class="font-semibold text-sm">₹1,899</span>
-                            <button onclick="quickOrder('Warm Cream Bespoke Tee', 1899)" class="text-xs font-bold text-atelier-green uppercase tracking-wider hover:text-atelier-gold">Customize →</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Item 3 -->
-                <div class="bg-white rounded-lg overflow-hidden border border-atelier-sand shadow-sm hover:shadow-md transition group">
-                    <div class="h-64 bg-atelier-charcoal/5 flex items-center justify-center p-6 relative">
-                        <div class="w-36 h-44 rounded-lg bg-neutral-900 flex items-center justify-center text-atelier-gold font-serif text-xl border border-atelier-gold/40 shadow-inner group-hover:scale-105 transition-transform">
-                            Obsidian
-                        </div>
-                        <span class="absolute top-3 left-3 bg-white text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded text-atelier-green border">420 GSM</span>
-                    </div>
-                    <div class="p-5 space-y-2">
-                        <p class="text-xs text-atelier-gold font-semibold uppercase tracking-wider">Heavyweight Hoodie</p>
-                        <h4 class="font-serif text-lg font-bold text-atelier-charcoal">Bespoke Obsidian Hoodie</h4>
-                        <p class="text-xs text-atelier-muted">Double-layered hood, seamless cuffs, and custom embossed embroidery.</p>
-                        <div class="pt-2 flex items-center justify-between">
-                            <span class="font-semibold text-sm">₹3,499</span>
-                            <button onclick="quickOrder('Bespoke Obsidian Hoodie', 3499)" class="text-xs font-bold text-atelier-green uppercase tracking-wider hover:text-atelier-gold">Customize →</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Item 4 -->
-                <div class="bg-white rounded-lg overflow-hidden border border-atelier-sand shadow-sm hover:shadow-md transition group">
-                    <div class="h-64 bg-blue-900/10 flex items-center justify-center p-6 relative">
-                        <div class="w-36 h-44 rounded-lg bg-slate-800 flex items-center justify-center text-atelier-gold font-serif text-xl border border-atelier-gold/40 shadow-inner group-hover:scale-105 transition-transform">
-                            Raw Denim
-                        </div>
-                        <span class="absolute top-3 left-3 bg-white text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded text-atelier-green border">14.5 Oz</span>
-                    </div>
-                    <div class="p-5 space-y-2">
-                        <p class="text-xs text-atelier-gold font-semibold uppercase tracking-wider">Hand-Painted / Washed</p>
-                        <h4 class="font-serif text-lg font-bold text-atelier-charcoal">Artisanal Custom Denim</h4>
-                        <p class="text-xs text-atelier-muted">Individually hand-painted back artwork and custom distress detailing.</p>
-                        <div class="pt-2 flex items-center justify-between">
-                            <span class="font-semibold text-sm">₹4,899</span>
-                            <button onclick="quickOrder('Artisanal Custom Denim', 4899)" class="text-xs font-bold text-atelier-green uppercase tracking-wider hover:text-atelier-gold">Customize →</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- UNBOXING & PACKAGING EXPERIENCE (Matching User's Mockup) -->
-    <section id="packaging" class="py-20 bg-atelier-green text-atelier-cream">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
-                <span class="text-xs uppercase tracking-[0.28em] text-atelier-gold font-bold">The S & J Standard</span>
-                <h2 class="font-serif text-3xl sm:text-5xl font-bold">The Unboxing Ritual</h2>
-                <p class="text-atelier-sand/80 text-sm">
-                    A luxury garment deserves luxury presentation. Every S & J ATELIER creation arrives wrapped like a bespoke gift.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Box 1 -->
-                <div class="bg-atelier-darkgreen/60 p-6 rounded-lg border border-atelier-lightgreen/60 hover:border-atelier-gold/50 transition">
-                    <div class="w-12 h-12 rounded-full bg-atelier-green border border-atelier-gold flex items-center justify-center text-atelier-gold mb-4 text-xl font-serif">
-                        01
-                    </div>
-                    <h3 class="font-serif text-xl font-bold text-atelier-sand mb-2">The Emerald Rigid Box</h3>
-                    <p class="text-xs text-atelier-sand/70 leading-relaxed">
-                        Heavy-grade forest green mailer box, hot-stamped with the signature gold-embossed SJ logo and "Est. 2026 Premium Basics" mark.
-                    </p>
-                </div>
-
-                <!-- Box 2 -->
-                <div class="bg-atelier-darkgreen/60 p-6 rounded-lg border border-atelier-lightgreen/60 hover:border-atelier-gold/50 transition">
-                    <div class="w-12 h-12 rounded-full bg-atelier-green border border-atelier-gold flex items-center justify-center text-atelier-gold mb-4 text-xl font-serif">
-                        02
-                    </div>
-                    <h3 class="font-serif text-xl font-bold text-atelier-sand mb-2">Tissue & Wax Seal</h3>
-                    <p class="text-xs text-atelier-sand/70 leading-relaxed">
-                        Each garment is enclosed in custom monogram translucent tissue paper, finished with an authentic forest green wax seal sticker and gold-foil thank you note.
-                    </p>
-                </div>
-
-                <!-- Box 3 -->
-                <div class="bg-atelier-darkgreen/60 p-6 rounded-lg border border-atelier-lightgreen/60 hover:border-atelier-gold/50 transition">
-                    <div class="w-12 h-12 rounded-full bg-atelier-green border border-atelier-gold flex items-center justify-center text-atelier-gold mb-4 text-xl font-serif">
-                        03
-                    </div>
-                    <h3 class="font-serif text-xl font-bold text-atelier-sand mb-2">Hang Tags & Spare Button</h3>
-                    <p class="text-xs text-atelier-sand/70 leading-relaxed">
-                        Thick textured linen cardstock hang tag tied with natural jute cord, accompanied by our translucent artisan spare button pouch.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- BESPOKE IDEA & SUGGESTION BOX -->
-    <section id="suggestions" class="py-20 bg-atelier-sand/40">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-white rounded-xl shadow-lg border border-atelier-sand p-8 sm:p-12">
-                <div class="text-center max-w-xl mx-auto mb-8 space-y-2">
-                    <span class="text-xs uppercase tracking-[0.2em] text-atelier-gold font-bold">Collaborative Atelier</span>
-                    <h2 class="font-serif text-3xl font-bold text-atelier-green">Customer Suggestion & Concept Box</h2>
-                    <p class="text-xs text-atelier-muted">
-                        Have an idea for a special print, seasonal color, or custom jacket cut? Share it with our head artisan.
-                    </p>
-                </div>
-
-                <form onsubmit="handleSuggestionSubmit(event)" class="space-y-4">
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div>
-                            <label class="block text-xs font-semibold uppercase tracking-wider text-atelier-charcoal mb-1">Your Full Name</label>
-                            <input id="sug-name" type="text" required placeholder="E.g., Yashvardhan Singh" class="w-full text-xs p-3 border border-atelier-sand rounded bg-atelier-cream/30 focus:outline-none focus:border-atelier-gold">
-                        </div>
-                        <div>
-                            <label class="block text-xs font-semibold uppercase tracking-wider text-atelier-charcoal mb-1">WhatsApp / Phone Number</label>
-                            <input id="sug-phone" type="tel" required placeholder="+91 98765 43210" class="w-full text-xs p-3 border border-atelier-sand rounded bg-atelier-cream/30 focus:outline-none focus:border-atelier-gold">
-                        </div>
-                    </div>
-
-                    <div>
-                        <label class="block text-xs font-semibold uppercase tracking-wider text-atelier-charcoal mb-1">Garment Category</label>
-                        <select id="sug-type" class="w-full text-xs p-3 border border-atelier-sand rounded bg-atelier-cream/30 focus:outline-none focus:border-atelier-gold">
-                            <option>Winter Collection / Hoodies & Sweatshirts</option>
-                            <option>Bespoke Denim Jackets / Distressed Work</option>
-                            <option>Custom Hand-Painted T-Shirts</option>
-                            <option>Wedding & Event Group Monograms</option>
-                            <option>General Brand Suggestion</option>
-                        </select>
-                    </div>
-
-                    <div>
-                        <label class="block text-xs font-semibold uppercase tracking-wider text-atelier-charcoal mb-1">Your Custom Idea / Feedback</label>
-                        <textarea id="sug-message" rows="4" required placeholder="Describe your design concept, preferred fabric weight, or special aesthetic..." class="w-full text-xs p-3 border border-atelier-sand rounded bg-atelier-cream/30 focus:outline-none focus:border-atelier-gold"></textarea>
-                    </div>
-
-                    <button type="submit" class="w-full py-4 bg-atelier-green hover:bg-atelier-darkgreen text-atelier-gold text-xs font-bold uppercase tracking-widest rounded transition">
-                        Submit Concept to Atelier
-                    </button>
-                </form>
-
-                <div id="suggestion-feedback" class="hidden mt-4 p-4 rounded bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs text-center">
-                    ✨ Thank you! Your suggestion has been recorded and will also open in WhatsApp so you can send references directly.
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SHOPPING BAG / CHECKOUT DRAWER (MODAL) -->
-    <div id="cart-modal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden flex justify-end">
-        <div class="bg-atelier-cream w-full max-w-md h-full shadow-2xl flex flex-col p-6 overflow-y-auto">
-            <div class="flex items-center justify-between pb-4 border-b border-atelier-sand">
-                <h3 class="font-serif text-xl font-bold text-atelier-green">Your Atelier Bag</h3>
-                <button onclick="toggleCartModal()" class="text-atelier-muted hover:text-atelier-charcoal text-2xl font-light">&times;</button>
-            </div>
-
-            <div id="cart-items-container" class="py-6 flex-1 space-y-4">
-                <p id="empty-cart-msg" class="text-xs text-atelier-muted text-center py-10">Your bag is currently empty.<br>Use our Customizer Studio to create your first piece.</p>
-            </div>
-
-            <div class="border-t border-atelier-sand pt-4 space-y-4">
-                <div class="flex items-center justify-between text-sm">
-                    <span class="text-atelier-muted">Subtotal</span>
-                    <span id="cart-total-price" class="font-bold text-atelier-charcoal">₹0</span>
-                </div>
-                <div class="flex items-center justify-between text-xs text-atelier-muted">
-                    <span>Shipping (White-Glove Courier)</span>
-                    <span class="text-emerald-700 font-bold uppercase">Complimentary</span>
-                </div>
-                <button onclick="checkoutBag()" class="w-full py-3.5 bg-atelier-gold hover:bg-atelier-goldhover text-atelier-darkgreen text-xs font-bold uppercase tracking-widest rounded shadow transition">
-                    Proceed to WhatsApp Order
-                </button>
-            </div>
-        </div>
+        <h3 class="font-serif text-lg font-bold text-brand-cream mb-2">Insured Doorstep Transit</h3>
+        <p class="text-xs text-brand-cream/60 leading-relaxed">Shipped directly to your doorstep in tamper-proof waterproof green mailers with real-time tracking.</p>
+      </div>
     </div>
+  </section>
 
-    <!-- WhatsApp Floating Action Button -->
-    <a href="https://wa.me/?text=Hello%20S%26J%20Atelier,%20I%20have%20an%20inquiry%20about%20your%20luxury%20custom%20apparel." target="_blank" class="fixed bottom-6 right-6 z-40 bg-[#25D366] text-white p-3.5 rounded-full shadow-2xl hover:scale-110 transition duration-300 flex items-center justify-center border-2 border-white" title="Chat on WhatsApp">
-        <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24">
-            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.275.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.043.073.043.419-.101.824z"/>
-        </svg>
-    </a>
+  <!-- VIP APPOINTMENT & CONTACT SECTION -->
+  <section id="contact" class="py-20 px-6 bg-brand-deepGreen border-t border-brand-gold/20">
+    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+      
+      <!-- Studio Details -->
+      <div>
+        <span class="text-xs uppercase tracking-[0.3em] text-brand-gold block mb-2">Atelier Headquarters</span>
+        <h2 class="font-serif text-3xl font-bold text-brand-cream mb-6">Connect With S & J Atelier</h2>
+        <p class="text-brand-cream/70 text-sm leading-relaxed mb-6">
+          Have an intricate embroidery brief, wedding trousseau request, or bespoke corporate order? Contact our design director directly.
+        </p>
 
-    <!-- Footer -->
-    <footer class="bg-atelier-darkgreen text-atelier-sand py-16 border-t border-atelier-lightgreen">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <!-- Col 1 -->
-                <div class="space-y-4">
-                    <div class="flex items-center space-x-2">
-                        <div class="w-8 h-8 rounded-full bg-atelier-green border border-atelier-gold flex items-center justify-center text-atelier-gold font-serif font-bold text-sm">
-                            SJ
-                        </div>
-                        <span class="font-serif text-xl tracking-wider text-atelier-sand font-bold">S & J ATELIER</span>
-                    </div>
-                    <p class="text-xs text-atelier-sand/70 leading-relaxed">
-                        Redefining Indian streetwear and luxury apparel through genuine bespoke tailoring, heavyweight textiles, and custom hand-embroidery.
-                    </p>
-                </div>
-
-                <!-- Col 2 -->
-                <div class="space-y-2 text-xs">
-                    <h5 class="font-serif text-sm font-bold text-atelier-gold uppercase tracking-wider">Garments</h5>
-                    <p><a href="#customizer" class="hover:text-atelier-gold transition">Heavyweight Oversized Tees</a></p>
-                    <p><a href="#customizer" class="hover:text-atelier-gold transition">French Terry Hoodies</a></p>
-                    <p><a href="#customizer" class="hover:text-atelier-gold transition">Artisanal Raw Denim</a></p>
-                    <p><a href="#customizer" class="hover:text-atelier-gold transition">Crewneck Sweatshirts</a></p>
-                </div>
-
-                <!-- Col 3 -->
-                <div class="space-y-2 text-xs">
-                    <h5 class="font-serif text-sm font-bold text-atelier-gold uppercase tracking-wider">Bespoke Perks</h5>
-                    <p>✓ 100% Made to Measure</p>
-                    <p>✓ Multi-Layer Screen Print</p>
-                    <p>✓ Custom Name & Monogram</p>
-                    <p>✓ Doorstep Nationwide Delivery</p>
-                </div>
-
-                <!-- Col 4 -->
-                <div class="space-y-2 text-xs">
-                    <h5 class="font-serif text-sm font-bold text-atelier-gold uppercase tracking-wider">Studio Contacts</h5>
-                    <p class="text-atelier-sand/70">Online Direct-to-Consumer Atelier</p>
-                    <p class="text-atelier-sand/70">Email: concierge@sjatelier.in</p>
-                    <p class="text-atelier-sand/70">Orders: Via WhatsApp / Customizer</p>
-                    <p class="text-atelier-gold pt-2 font-mono">Available 10:00 AM - 8:00 PM</p>
-                </div>
-            </div>
-
-            <div class="mt-12 pt-8 border-t border-atelier-lightgreen/40 flex flex-col sm:flex-row items-center justify-between text-xs text-atelier-sand/60">
-                <p>© 2026 S & J ATELIER. All Rights Reserved. Crafted with pure obsession.</p>
-                <p class="mt-2 sm:mt-0 font-serif italic text-atelier-gold">Excellence in Every Thread.</p>
-            </div>
+        <div class="space-y-4 text-sm text-brand-cream/80">
+          <div class="flex items-center space-x-3">
+            <i class="fab fa-whatsapp text-brand-gold text-lg w-5"></i>
+            <span><strong>Direct WhatsApp:</strong> +91 8863075356</span>
+          </div>
+          <div class="flex items-center space-x-3">
+            <i class="fas fa-envelope text-brand-gold text-lg w-5"></i>
+            <span><strong>Email:</strong> concierge@sjatelier.com</span>
+          </div>
+          <div class="flex items-center space-x-3">
+            <i class="fas fa-clock text-brand-gold text-lg w-5"></i>
+            <span><strong>Bespoke Hours:</strong> 10:00 AM – 8:00 PM (Mon-Sat)</span>
+          </div>
+          <div class="flex items-center space-x-3">
+            <i class="fas fa-location-dot text-brand-gold text-lg w-5"></i>
+            <span><strong>Dispatch Studio:</strong> Bihar, India • Delivering Pan-India</span>
+          </div>
         </div>
-    </footer>
+      </div>
 
-    <!-- Interactive Logic Script -->
-    <script>
-        // State management
-        const state = {
-            garment: 'Heavy Oversized T-Shirt',
-            garmentType: 'tshirt',
-            price: 1899,
-            colorHex: '#1B382B',
-            colorName: 'Signature Forest Green',
-            textColorHex: '#C5A059',
-            craft: 'Hand-Guided Embroidery',
-            customText: 'S & J ATELIER',
-            fontClass: 'embroidery-preview-font-2',
-            placement: 'Center Chest',
-            size: 'Medium (M - Oversized)',
-            cart: []
-        };
+      <!-- Quick Message Form -->
+      <div class="bg-brand-emerald p-6 rounded border border-brand-gold/30">
+        <h3 class="font-serif text-lg font-bold text-brand-cream mb-4">Request a Design Consultation</h3>
+        <form onsubmit="handleFormSubmit(event)" class="space-y-3">
+          <input type="text" id="custName" required placeholder="Your Full Name" class="w-full bg-brand-deepGreen border border-brand-gold/30 rounded p-2.5 text-xs text-brand-cream focus:outline-none">
+          <input type="tel" id="custPhone" required placeholder="Phone / WhatsApp Number" class="w-full bg-brand-deepGreen border border-brand-gold/30 rounded p-2.5 text-xs text-brand-cream focus:outline-none">
+          <textarea id="custRequirement" rows="3" required placeholder="Tell us about the piece you want tailored..." class="w-full bg-brand-deepGreen border border-brand-gold/30 rounded p-2.5 text-xs text-brand-cream focus:outline-none"></textarea>
+          <button type="submit" class="w-full bg-brand-gold text-brand-deepGreen font-bold uppercase tracking-wider text-xs py-3 rounded hover:bg-brand-goldLight transition">
+            Submit Consultation Brief
+          </button>
+        </form>
+      </div>
 
-        // Update Garment Type
-        function updateGarment(type, name, price) {
-            state.garmentType = type;
-            state.garment = name;
-            state.price = price;
-            
-            // UI elements
-            document.getElementById('preview-price').innerText = price.toLocaleString('en-IN');
-            document.getElementById('spec-apparel').innerText = name;
+    </div>
+  </section>
 
-            // Highlight buttons
-            document.querySelectorAll('.garment-btn').forEach(btn => {
-                btn.classList.remove('border-atelier-gold', 'bg-atelier-cream', 'text-atelier-green');
-                btn.classList.add('border-atelier-sand', 'text-atelier-charcoal');
-            });
-            event.currentTarget.classList.add('border-atelier-gold', 'bg-atelier-cream', 'text-atelier-green');
-            event.currentTarget.classList.remove('border-atelier-sand', 'text-atelier-charcoal');
+  <!-- FOOTER -->
+  <footer class="bg-black/90 py-8 text-center text-xs text-brand-cream/40 border-t border-brand-gold/10">
+    <p>© 2026 S & J ATELIER. All Rights Reserved. Bespoke Luxury Craftsmanship.</p>
+  </footer>
+
+  <!-- JAVASCRIPT ENGINE FOR VISUAL CUSTOMIZER -->
+  <script>
+    // State
+    let currentGarment = 'hoodie';
+    let garmentBasePrice = 2499;
+    let garmentTitle = 'Oversized Hoodie';
+    let currentColor = '#112920';
+    let currentColorName = 'Emerald Green';
+    let currentCraft = 'puff';
+    let craftPrice = 350;
+    let craftTitle = '3D Puff Print';
+    let currentView = 'front';
+    let currentArtworkType = 'animal';
+    let customUploadedImg = null;
+
+    // SVG paths for garments
+    const garmentPaths = {
+      hoodie: {
+        front: 'M90 40 L120 70 L180 70 L210 40 L280 85 L245 155 L215 140 L215 300 L85 300 L85 140 L55 155 L20 85 Z',
+        back: 'M90 40 L130 55 L170 55 L210 40 L280 85 L245 155 L215 140 L215 300 L85 300 L85 140 L55 155 L20 85 Z',
+        collarFront: 'M120 70 Q150 110 180 70 Q150 45 120 70 Z',
+        collarBack: 'M120 50 Q150 70 180 50 Z'
+      },
+      tee: {
+        front: 'M95 40 L125 55 L175 55 L205 40 L260 75 L235 125 L210 115 L210 290 L90 290 L90 115 L65 125 L40 75 Z',
+        back: 'M95 40 L125 45 L175 45 L205 40 L260 75 L235 125 L210 115 L210 290 L90 290 L90 115 L65 125 L40 75 Z',
+        collarFront: 'M125 55 Q150 80 175 55 Z',
+        collarBack: 'M125 45 Q150 55 175 45 Z'
+      },
+      jacket: {
+        front: 'M85 35 L120 60 L180 60 L215 35 L285 75 L255 145 L225 130 L225 305 L75 305 L75 130 L45 145 L15 75 Z',
+        back: 'M85 35 L120 50 L180 50 L215 35 L285 75 L255 145 L225 130 L225 305 L75 305 L75 130 L45 145 L15 75 Z',
+        collarFront: 'M120 60 L150 140 L180 60 Z',
+        collarBack: 'M120 50 L180 50 Z'
+      },
+      shirt: {
+        front: 'M95 45 L125 65 L175 65 L205 45 L265 80 L235 130 L210 120 L210 295 L90 295 L90 120 L65 130 L35 80 Z',
+        back: 'M95 45 L125 55 L175 55 L205 45 L265 80 L235 130 L210 120 L210 295 L90 295 L90 120 L65 130 L35 80 Z',
+        collarFront: 'M125 65 L150 110 L175 65 Z',
+        collarBack: 'M125 55 L175 55 Z'
+      }
+    };
+
+    function setView(view) {
+      currentView = view;
+      document.getElementById('btnViewFront').className = view === 'front' 
+        ? 'px-5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-gold text-brand-deepGreen transition'
+        : 'px-5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider text-brand-cream/70 hover:text-brand-gold transition';
+      document.getElementById('btnViewBack').className = view === 'back'
+        ? 'px-5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-gold text-brand-deepGreen transition'
+        : 'px-5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider text-brand-cream/70 hover:text-brand-gold transition';
+      
+      document.getElementById('labelView').innerText = view === 'front' ? 'Front' : 'Back';
+      
+      // Update SVG body & collar according to view
+      const pathSet = garmentPaths[currentGarment];
+      document.getElementById('garmentBody').setAttribute('d', view === 'front' ? pathSet.front : pathSet.back);
+      document.getElementById('garmentCollar').setAttribute('d', view === 'front' ? pathSet.collarFront : pathSet.collarBack);
+      
+      // Hide hoodie pocket on back view
+      const pocket = document.getElementById('hoodiePocket');
+      if (pocket) {
+        pocket.style.display = (currentGarment === 'hoodie' && view === 'front') ? 'block' : 'none';
+      }
+
+      // If back view, default to upper back placement
+      if (view === 'back') {
+        document.getElementById('placementSelect').value = 'back';
+        updatePlacement();
+      } else {
+        document.getElementById('placementSelect').value = 'chest';
+        updatePlacement();
+      }
+    }
+
+    function setGarment(type, price, title) {
+      currentGarment = type;
+      garmentBasePrice = price;
+      garmentTitle = title;
+      
+      document.querySelectorAll('.garment-btn').forEach(btn => {
+        btn.classList.remove('border-brand-gold', 'bg-brand-emerald');
+        btn.classList.add('border-brand-gold/30', 'bg-brand-deepGreen');
+      });
+      event.currentTarget.classList.add('border-brand-gold', 'bg-brand-emerald');
+      event.currentTarget.classList.remove('border-brand-gold/30', 'bg-brand-deepGreen');
+
+      setView(currentView);
+      updateTotal();
+    }
+
+    function setColor(hex, name) {
+      currentColor = hex;
+      currentColorName = name;
+      document.getElementById('garmentBody').setAttribute('fill', hex);
+      document.getElementById('currentColorName').innerText = `${name} (${hex})`;
+
+      // Adjust text/icon contrast if garment is white or very light
+      const artText = document.getElementById('artworkText');
+      if (hex === '#ffffff' || hex === '#f5f2e9') {
+        artText.classList.remove('text-brand-cream/90');
+        artText.classList.add('text-black');
+      } else {
+        artText.classList.remove('text-black');
+        artText.classList.add('text-brand-cream/90');
+      }
+    }
+
+    function setArtwork(id, type) {
+      currentArtworkType = type;
+      customUploadedImg = null;
+      const visual = document.getElementById('artworkVisual');
+      
+      if (id === 'tiger') {
+        visual.innerHTML = '<span style="font-size: 44px;">🐅</span>';
+      } else if (id === 'shiva') {
+        visual.innerHTML = '<span style="font-size: 44px; color: #c5a059;">🔱</span>';
+      } else if (id === 'heart') {
+        visual.innerHTML = '<span style="font-size: 40px; color: #dc2626;">🖤</span>';
+      } else if (id === 'quote') {
+        visual.innerHTML = '<span style="font-family: Cinzel; font-size: 26px; color: #c5a059;">𝕾&𝕵</span>';
+      }
+
+      document.querySelectorAll('.art-btn').forEach(b => b.classList.remove('border-brand-gold', 'border-2'));
+      event.currentTarget.classList.add('border-brand-gold', 'border-2');
+    }
+
+    function handleImageUpload(e) {
+      const file = e.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function(evt) {
+          customUploadedImg = evt.target.result;
+          const visual = document.getElementById('artworkVisual');
+          visual.innerHTML = `<img src="${customUploadedImg}" class="w-16 h-16 object-contain rounded drop-shadow-md">`;
+          document.getElementById('artworkText').innerText = "CUSTOM PRINT";
         }
+        reader.readAsDataURL(file);
+      }
+    }
 
-        // Update Color
-        function updateColor(hex, name, defaultTextColor) {
-            state.colorHex = hex;
-            state.colorName = name;
-            state.textColorHex = defaultTextColor;
+    function setCraft(craft, price, title) {
+      currentCraft = craft;
+      craftPrice = price;
+      craftTitle = title;
 
-            const stage = document.getElementById('garment-color-wrapper');
-            stage.style.backgroundColor = hex;
+      const artContainer = document.getElementById('artworkContainer');
+      artContainer.className = 'absolute pointer-events-none flex flex-col items-center justify-center transition-all duration-300';
+      
+      if (craft === 'puff') artContainer.classList.add('craft-puff');
+      if (craft === 'embroidery') artContainer.classList.add('craft-embroidery');
+      if (craft === 'screen') artContainer.classList.add('craft-screen');
 
-            const textElem = document.getElementById('visual-custom-text');
-            textElem.style.color = defaultTextColor;
+      document.querySelectorAll('.craft-btn').forEach(btn => {
+        btn.classList.remove('border-brand-gold', 'border-2', 'bg-brand-emerald');
+        btn.classList.add('border-brand-gold/30', 'bg-brand-deepGreen');
+      });
+      event.currentTarget.classList.add('border-brand-gold', 'border-2', 'bg-brand-emerald');
+      event.currentTarget.classList.remove('border-brand-gold/30', 'bg-brand-deepGreen');
 
-            document.getElementById('spec-color').innerText = name;
-        }
+      updateTotal();
+    }
 
-        // Update Craft
-        function updateCraft(craftName) {
-            state.craft = craftName;
-            document.getElementById('spec-craft').innerText = craftName;
-            document.getElementById('visual-technique-pill').innerText = craftName;
-        }
+    function updatePlacement() {
+      const place = document.getElementById('placementSelect').value;
+      const container = document.getElementById('artworkContainer');
+      
+      if (place === 'chest') {
+        container.style.top = '36%';
+        container.style.left = '50%';
+        container.style.transform = 'translate(-50%, -50%) scale(1)';
+      } else if (place === 'pocket') {
+        container.style.top = '34%';
+        container.style.left = '38%';
+        container.style.transform = 'translate(-50%, -50%) scale(0.65)';
+      } else if (place === 'back') {
+        container.style.top = '40%';
+        container.style.left = '50%';
+        container.style.transform = 'translate(-50%, -50%) scale(1.3)';
+      }
+    }
 
-        // Render Custom text
-        function renderCustomText(val) {
-            state.customText = val.trim() === '' ? 'YOUR MONOGRAM' : val;
-            document.getElementById('visual-custom-text').innerText = state.customText;
-        }
+    function updateCustomText(val) {
+      const artText = document.getElementById('artworkText');
+      artText.innerText = val.trim() ? val.toUpperCase() : "S&J ROYAL";
+    }
 
-        // Set Font Style
-        function setFontStyle(fontType) {
-            const textElem = document.getElementById('visual-custom-text');
-            textElem.classList.remove('embroidery-preview-font-1', 'embroidery-preview-font-2', 'embroidery-preview-font-3');
-            
-            if (fontType === 'font-1') {
-                textElem.classList.add('embroidery-preview-font-1');
-                state.fontClass = 'Serif Royal';
-            } else if (fontType === 'font-2') {
-                textElem.classList.add('embroidery-preview-font-2');
-                state.fontClass = 'Modern Bold';
-            } else if (fontType === 'font-3') {
-                textElem.classList.add('embroidery-preview-font-3');
-                state.fontClass = 'Script Elegance';
-            }
-        }
+    function updateTotal() {
+      const total = garmentBasePrice + craftPrice;
+      document.getElementById('labelGarment').innerText = garmentTitle;
+      document.getElementById('labelPrice').innerText = `₹${total.toLocaleString('en-IN')}`;
+    }
 
-        // Send Order direct to WhatsApp
-        function sendOrderViaWhatsApp() {
-            const placement = document.getElementById('select-placement').value;
-            const size = document.getElementById('select-size').value;
+    function orderViaWhatsApp() {
+      const customTxt = document.getElementById('customTextInput').value || 'Standard S&J Branding';
+      const placement = document.getElementById('placementSelect').value;
+      const total = garmentBasePrice + craftPrice;
 
-            const message = `*NEW BESPOKE ORDER - S %26 J ATELIER*%0A` +
-                `--------------------------------%0A` +
-                `*Garment:* ${encodeURIComponent(state.garment)}%0A` +
-                `*Fabric Color:* ${encodeURIComponent(state.colorName)}%0A` +
-                `*Craft Style:* ${encodeURIComponent(state.craft)}%0A` +
-                `*Custom Text:* ${encodeURIComponent(state.customText)}%0A` +
-                `*Font Style:* ${encodeURIComponent(state.fontClass)}%0A` +
-                `*Placement:* ${encodeURIComponent(placement)}%0A` +
-                `*Size:* ${encodeURIComponent(size)}%0A` +
-                `*Estimated Price:* ₹${state.price}%0A` +
-                `--------------------------------%0A` +
-                `Please confirm my custom sample and sharing timeline!`;
+      const message = `*NEW BESPOKE ORDER BRIEF - S & J ATELIER*%0A` +
+        `-----------------------------------------%0A` +
+        `*Garment:* ${garmentTitle}%0A` +
+        `*Base Color:* ${currentColorName} (${currentColor})%0A` +
+        `*Craft Type:* ${craftTitle}%0A` +
+        `*Placement:* ${placement.toUpperCase()}%0A` +
+        `*Custom Text/Name:* ${customTxt}%0A` +
+        `*Uploaded Custom Artwork:* ${customUploadedImg ? 'YES (Will attach on chat)' : 'Pre-selected Library'}%0A` +
+        `*Estimated Spec Quote:* ₹${total.toLocaleString('en-IN')}%0A` +
+        `-----------------------------------------%0A` +
+        `Hello Atelier Director, please review this custom piece and advise on size and timeline.`;
 
-            window.open(`https://wa.me/?text=${message}`, '_blank');
-        }
+      window.open(`https://wa.me/918863075356?text=${message}`, '_blank');
+    }
 
-        // Quick Order from sample collection
-        function quickOrder(productTitle, price) {
-            updateGarment('custom', productTitle, price);
-            const customizerSec = document.getElementById('customizer');
-            customizerSec.scrollIntoView({ behavior: 'smooth' });
-        }
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('custName').value;
+      const phone = document.getElementById('custPhone').value;
+      const req = document.getElementById('custRequirement').value;
 
-        // Cart Drawer
-        function toggleCartModal() {
-            const modal = document.getElementById('cart-modal');
-            modal.classList.toggle('hidden');
-        }
+      const msg = `*VIP CONSULTATION REQUEST - S & J ATELIER*%0A` +
+        `Name: ${name}%0A` +
+        `Phone: ${phone}%0A` +
+        `Requirement: ${req}`;
 
-        // Add to Bag
-        function addToBagFromCustomizer() {
-            const placement = document.getElementById('select-placement').value;
-            const size = document.getElementById('select-size').value;
+      window.open(`https://wa.me/918863075356?text=${encodeURIComponent(msg)}`, '_blank');
+    }
 
-            state.cart.push({
-                item: state.garment,
-                color: state.colorName,
-                craft: state.craft,
-                text: state.customText,
-                size: size,
-                placement: placement,
-                price: state.price
-            });
-
-            renderCart();
-            toggleCartModal();
-        }
-
-        function renderCart() {
-            const container = document.getElementById('cart-items-container');
-            const counter = document.getElementById('cart-counter');
-            const totalElem = document.getElementById('cart-total-price');
-
-            counter.innerText = state.cart.length;
-
-            if (state.cart.length === 0) {
-                container.innerHTML = `<p class="text-xs text-atelier-muted text-center py-10">Your bag is currently empty.<br>Use our Customizer Studio to create your first piece.</p>`;
-                totalElem.innerText = `₹0`;
-                return;
-            }
-
-            let total = 0;
-            container.innerHTML = '';
-            state.cart.forEach((c, index) => {
-                total += c.price;
-                const div = document.createElement('div');
-                div.className = "bg-white p-3 rounded border border-atelier-sand flex justify-between items-start text-xs";
-                div.innerHTML = `
-                    <div>
-                        <h4 class="font-bold text-atelier-green">${c.item}</h4>
-                        <p class="text-gray-500 text-[11px]">${c.color} • ${c.size}</p>
-                        <p class="text-atelier-gold text-[11px]">Craft: ${c.craft} ("${c.text}")</p>
-                    </div>
-                    <div class="text-right">
-                        <span class="font-bold">₹${c.price}</span>
-                        <button onclick="removeItem(${index})" class="block text-[10px] text-red-500 hover:underline mt-2">Remove</button>
-                    </div>
-                `;
-                container.appendChild(div);
-            });
-
-            totalElem.innerText = `₹` + total.toLocaleString('en-IN');
-        }
-
-        function removeItem(index) {
-            state.cart.splice(index, 1);
-            renderCart();
-        }
-
-        function checkoutBag() {
-            if (state.cart.length === 0) {
-                alert("Your bag is empty! Design an item first.");
-                return;
-            }
-
-            let summary = `*BAG CHECKOUT - S %26 J ATELIER*%0A--------------------------------%0A`;
-            let total = 0;
-            state.cart.forEach((c, i) => {
-                total += c.price;
-                summary += `${i+1}. *${encodeURIComponent(c.item)}* (${encodeURIComponent(c.size)}, ${encodeURIComponent(c.color)}) - ₹${c.price}%0A   Text: "${encodeURIComponent(c.text)}" [${encodeURIComponent(c.craft)}]%0A`;
-            });
-            summary += `--------------------------------%0A*Total Amount:* ₹${total}%0A*White-Glove Shipping:* Included%0A%0APlease arrange checkout!`;
-
-            window.open(`https://wa.me/?text=${summary}`, '_blank');
-        }
-
-        // Suggestions Box
-        function handleSuggestionSubmit(e) {
-            e.preventDefault();
-            const name = document.getElementById('sug-name').value;
-            const phone = document.getElementById('sug-phone').value;
-            const category = document.getElementById('sug-type').value;
-            const msg = document.getElementById('sug-message').value;
-
-            document.getElementById('suggestion-feedback').classList.remove('hidden');
-
-            const textToSend = `*NEW SUGGESTION / BESPOKE CONCEPT*%0A` +
-                `*Name:* ${encodeURIComponent(name)}%0A` +
-                `*Phone:* ${encodeURIComponent(phone)}%0A` +
-                `*Category:* ${encodeURIComponent(category)}%0A` +
-                `*Idea:* ${encodeURIComponent(msg)}`;
-
-            setTimeout(() => {
-                window.open(`https://wa.me/?text=${textToSend}`, '_blank');
-            }, 1000);
-        }
-    </script>
+    // Initialize initial values
+    updateTotal();
+  </script>
 </body>
 </html>
